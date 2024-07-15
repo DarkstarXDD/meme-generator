@@ -1,38 +1,46 @@
 @font-face {
   font-family: "Karla";
-  font-weight: 400;
-  src: local("Karla-Regular"), url("./src/fonts/karla-v31-latin-regular.woff2"),
-    url("./src/fonts/karla-v31-latin-regular.woff");
-}
-
-@font-face {
-  font-family: "Karla";
-  font-weight: 700;
-  src: local("Karla-Bold"), url("src/fonts/karla-v31-latin-700.woff2"),
-    url("/src/fonts/karla-v31-latin-700.woff");
+  src: url("./src/assets/fonts/Karla-VariableFont_wght.woff2");
 }
 
 @font-face {
   font-family: "Inter";
-  font-weight: 500;
-  src: local("Inter-Medium"), url("src/fonts/inter-v13-latin-500.woff2"),
-    url("src/fonts/inter-v13-latin-500.woff");
+  src: url("./src/assets/fonts/Inter-VariableFont_slnt_wght.woff2");
 }
 
+/* ------------------- CSS Reset ------------------- */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-img {
+*:focus-visible {
+  outline: 0.125rem dotted hsl(52, 33%, 68%);
+  outline-offset: 0.125rem;
+}
+
+img,
+svg,
+picture {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
+input,
 button {
-  color: inherit;
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 /* --------------- Utility Classes --------------- */
@@ -48,82 +56,95 @@ button {
   align-items: center;
 }
 
-.container {
-  padding: 20px;
-  max-width: 550px;
-  margin-inline: auto;
-}
 /* --------------- End of Utility Classes --------------- */
 
 body {
-  background-color: grey;
-  color: white;
-  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100dvh;
   font-family: "karla", sans-serif;
-  padding: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  background-color: #1e2227;
+  padding: 1.25rem;
 }
 
-.container--header {
-  background: linear-gradient(90deg, hsl(284, 58%, 32%), hsl(284, 69%, 49%));
+.wrapper {
+  max-width: 36rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(90deg, hsl(151, 24%, 60%), hsl(37, 79%, 75%));
   gap: 8px;
+  padding: 2rem;
 }
 
-.logo {
-  width: 32px;
-  height: 26px;
+.header__logo {
+  width: 2rem;
+  height: 1.75rem;
 }
 
-.title {
-  font-size: 22px;
+.header__title {
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: calc(20px * -0.1);
+  letter-spacing: -1px;
 }
 
-.project-name {
-  font-size: 15px;
-  margin-left: auto;
+.header__project-number {
   font-family: "Inter", sans-serif;
   font-weight: 500;
+  margin-left: auto;
 }
 
-.container--main {
-  background-color: darkolivegreen;
-  padding: 36px;
+.main {
+  background-color: #3d405b;
+  gap: 1rem;
+  padding: 2rem;
 }
 
 .form {
+  width: 100%;
   display: grid;
   grid-template: auto auto / auto auto;
-  gap: 16px;
+  gap: 1rem;
+}
+
+.form__label {
+  color: white;
+}
+
+.form__input-wrapper {
+  align-items: start;
+  gap: 0.5rem;
 }
 
 .form__input {
   width: 100%;
-  border: 1px solid hsl(255, 5%, 84%);
-  border-radius: 5px;
-  padding: 12px 10px;
-}
-
-.form__input:focus {
-  outline: none;
+  border: 2px solid hsl(52, 33%, 68%);
+  border-radius: 8px;
+  padding: 0.75rem;
 }
 
 .form__button {
-  background: linear-gradient(90deg, hsl(284, 58%, 32%), hsl(284, 69%, 49%));
-  font-size: 16px;
-  font-weight: 700;
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 5px;
   grid-column: 1 / -1;
+  font-weight: 700;
+  background: linear-gradient(90deg, hsl(151, 24%, 60%), hsl(37, 79%, 75%));
+  padding: 0.875rem;
+  border: none;
+  border-radius: 6px;
 }
 
 .form__button:hover {
   cursor: pointer;
-  background: linear-gradient(90deg, hsl(284, 58%, 40%), hsl(284, 69%, 55%));
+  background: linear-gradient(90deg, hsl(151, 24%, 70%), hsl(37, 79%, 85%));
 }
 
 .meme-img {
-  margin-top: 10px;
+  width: 100%;
+  border-radius: 8px;
 }

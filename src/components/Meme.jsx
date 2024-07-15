@@ -29,14 +29,18 @@ export default function Meme() {
   }
 
   return (
-    <main className="container container--main">
+    <main className="main flex-column">
       <form className="form">
-        <div>
-          <label htmlFor="top_text">Top Text</label>
+        <div className="form__input-wrapper flex-column">
+          <label className="form__label" htmlFor="top_text">
+            Top Text
+          </label>
           <input className="form__input" id="top_text" type="text" />
         </div>
-        <div>
-          <label htmlFor="bottom_text">Bottom Text</label>
+        <div className="form__input-wrapper flex-column">
+          <label className="form__label" htmlFor="bottom_text">
+            Bottom Text
+          </label>
           <input className="form__input" id="bottom_text" type="text" />
         </div>
         <button
@@ -51,8 +55,8 @@ export default function Meme() {
         className="meme-img"
         src={meme.randomImage}
         alt=""
-        width={100}
-        height={100}
+        width="100"
+        height="100"
       />
     </main>
   )

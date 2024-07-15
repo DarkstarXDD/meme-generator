@@ -1,15 +1,17 @@
+import trollFace from "../assets/images/troll-face.png"
+
 export default function Header() {
   return (
-    <header className="container container--header flex-row">
+    <header className="header flex-row">
       <img
-        className="logo"
-        src="./troll-face.png"
+        className="header__logo"
+        src={trollFace}
         alt="troll face"
-        width={126}
-        height={105}
-      ></img>
-      <p className="title">Meme Generator</p>
-      <p className="project-name">Module 3 - Project 01</p>
+        width="32"
+        height="28"
+      />
+      <h1 className="header__title">Meme Generator</h1>
+      <p className="header__project-number">Module 3 - Project 01</p>
     </header>
   )
 }
