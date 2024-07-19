@@ -1,11 +1,11 @@
 import Header from "./components/Header"
-import Meme from "./components/Meme"
+import Main from "./components/Main"
 
 export default function App() {
   return (
     <div className="wrapper">
       <Header />
-      <Meme />
+      <Main />
     </div>
   )
 }

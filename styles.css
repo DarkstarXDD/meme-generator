@@ -125,6 +125,7 @@ body {
 
 .form__input {
   width: 100%;
+  font-weight: 600;
   border: 2px solid hsl(52, 33%, 68%);
   border-radius: 8px;
   padding: 0.75rem;
@@ -142,6 +143,30 @@ body {
 .form__button:hover {
   cursor: pointer;
   background: linear-gradient(90deg, hsl(151, 24%, 70%), hsl(37, 79%, 85%));
+}
+
+.meme {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+}
+
+.meme__text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-shadow: 1px 1px 8px black;
+  padding-block: 1rem;
+}
+
+.meme__text-top {
+  top: 0;
+}
+
+.meme__text-bottom {
+  bottom: 0;
 }
 
 .meme-img {
