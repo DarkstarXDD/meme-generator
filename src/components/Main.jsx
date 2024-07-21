@@ -54,6 +54,7 @@ export default function Main() {
             id={formId + "top_text"}
             name="topText"
             onChange={handleChange}
+            placeholder="One does not simply"
             className="form__input"
           />
         </div>
@@ -66,6 +67,7 @@ export default function Main() {
             id={formId + "bottom_text"}
             name="bottomText"
             onChange={handleChange}
+            placeholder="walk into mordor"
             className="form__input"
           />
         </div>

@@ -80,8 +80,9 @@ body {
 
 .header {
   background: linear-gradient(90deg, hsl(151, 24%, 60%), hsl(37, 79%, 75%));
-  gap: 8px;
-  padding: 2rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
 }
 
 .header__logo {
@@ -98,7 +99,6 @@ body {
 .header__project-number {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  margin-left: auto;
 }
 
 .main {
@@ -110,7 +110,6 @@ body {
 .form {
   width: 100%;
   display: grid;
-  grid-template: auto auto / auto auto;
   gap: 1rem;
 }
 
@@ -119,14 +118,13 @@ body {
 }
 
 .form__input-wrapper {
-  align-items: start;
   gap: 0.5rem;
 }
 
 .form__input {
   width: 100%;
   font-weight: 600;
-  border: 2px solid hsl(52, 33%, 68%);
+  border: 0.125rem solid hsl(52, 33%, 68%);
   border-radius: 8px;
   padding: 0.75rem;
 }
@@ -134,6 +132,7 @@ body {
 .form__button {
   grid-column: 1 / -1;
   font-weight: 700;
+  color: black;
   background: linear-gradient(90deg, hsl(151, 24%, 60%), hsl(37, 79%, 75%));
   padding: 0.875rem;
   border: none;
@@ -147,7 +146,7 @@ body {
 
 .meme {
   position: relative;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -173,4 +172,24 @@ body {
 .meme-img {
   width: 100%;
   border-radius: 8px;
+}
+
+/* ------------------- Your Text Here ------------------- */
+@media (min-width: 40rem) {
+  .header {
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  .header__project-number {
+    margin-left: auto;
+  }
+
+  .form {
+    grid-template: auto auto / auto auto;
+  }
+
+  .meme {
+    font-size: 1.5rem;
+  }
 }
